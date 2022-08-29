@@ -1,11 +1,11 @@
 
 import "./App.css";
-import io from 'socket.io-client'
+import {io} from 'socket.io-client'
 import Chat from "./chat.js"
 import { useState } from "react";
 
-const socket = io.connect("http://localhost:4000")
-function App() { 
+const socket = io("https://tahcppa.herokuapp.com",)
+function App() {    
    const [name,setname]= useState("")
    const [room,setroom]= useState("")
    const [show,setshow]= useState(false)
@@ -15,7 +15,7 @@ function App() {
        socket.emit("join_room",room,name)
        setshow(true)
     }
-   }
+   }   
   return (
     <div className="App">
       {!show ?
