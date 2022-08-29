@@ -16,7 +16,7 @@ const send = async(event)=>{
         }
         await socket.emit("send_msg",message)
         setmsglist((list) => [...list, message])
-        
+        setcurrentMsg("")
 
     }
 }          
@@ -53,6 +53,7 @@ const send = async(event)=>{
            </div>
            <div className="chat-footer">
            <input type="text"
+           value={currentMsg}
        onChange={(event)=>{
         setcurrentMsg(event.target.value)
        }}
