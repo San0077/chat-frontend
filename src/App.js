@@ -20,14 +20,14 @@ function App() {
     <div className="App">
       {!show ?
       <div className="joinChatContainer">
-      <h4>join a Room</h4>
-       <input type="text"
+      <h4>Join a Room</h4>
+       <input type="text" placeholder="User Name"
        onChange={(event)=>{
            setname(event.target.value)
        }}
        
        />
-       <input type="text"
+       <input type="text" placeholder="Room ID"
          onChange={(event)=>{
           setroom(event.target.value)
       }}/>
