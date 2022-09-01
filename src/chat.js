@@ -52,7 +52,7 @@ const send = async(event)=>{
              </ScrollToBottom>
            </div>
            <div className="chat-footer">
-           <input type="text"
+           <input type="text" placeholder="Type Here"
            value={currentMsg}
        onChange={(event)=>{
         setcurrentMsg(event.target.value)
